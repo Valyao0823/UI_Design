@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/themegray"
+    tools:context="com.example.hesolutions.demoui.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backimage2"
+        android:alpha="0.2"
+        android:id="@+id/blurimage"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sectora"
+        android:id="@+id/basefloorplan"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/linearLayout2" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/linearLayout"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="55dp"
+            android:id="@+id/logo"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:text="Sector A"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="15dp"
+            android:format12Hour="EEEE"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/currenday"
+            android:layout_marginTop="28dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/currentime"
+            android:textColor="@color/white" />
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="15dp"
+            android:id="@+id/currentyear"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp"
+            android:layout_centerVertical="true"
+            android:format12Hour="MMM dd, yyyy"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/currentime"
+            android:textColor="@color/white" />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="40dp"
+            android:id="@+id/currentime"
+            android:layout_alignParentRight="true"
+            android:format12Hour="hh:mm aa"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@color/gray"
+        android:layout_above="@+id/linearLayout2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2"
+        android:background="@color/transparent"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent"
+            android:background="@drawable/backclick"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:id="@+id/goback" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:background="@drawable/settingclick"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:id="@+id/gofunction" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/reportclick"
+            android:layout_gravity="center"
+            android:id="@+id/goreport" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/homeclick"
+            android:id="@+id/gomain"/>
+    </LinearLayout>
+
+</RelativeLayout>
